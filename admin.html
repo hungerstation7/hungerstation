@@ -57,7 +57,7 @@ function setp(p,v){var a=p.split("."),l=a.pop(),o=draft;a.forEach(function(k){o=
 function fld(label,p,type){return '<label>'+label+'</label><input type="'+(type||"text")+'" data-p="'+p+'" value="'+esc(getp(p))+'"'+(type=="number"?' min="0" step="any"':'')+'>'}
 function renderAdmin(){
   var h='<div class="abar"><b>Editing menu</b><button data-a="logout">Disconnect</button><button class="pri" data-a="save">Save &amp; Publish</button></div>';
-  h+='<section><h3>Café settings</h3>'+fld("Café name","cafe")+fld("Tagline","tagline")+fld("WhatsApp number (country code, digits only)","wa")+fld("Currency symbol","cur")+'</section>';
+  h+='<section><h3>Café settings</h3>'+fld("Café name","cafe")+fld("Tagline","tagline")+fld("WhatsApp number (country code, digits only)","wa")+fld("Currency symbol","cur")+'<label>Logo</label><div class="ctl">'+(draft.logo?'<img src="'+esc(draft.logo)+'" height="56" style="background:#fff;border-radius:8px;padding:3px" alt="">':'<span class="hint">No logo</span>')+'<button data-a="pick">🖼️ Choose logo</button><input type="file" accept="image/*" data-logo="1" style="display:none">'+(draft.logo?'<button data-a="rl">Remove logo</button>':'')+'</div></section>';
   draft.cats.forEach(function(c,ci){
     h+='<section><h3>Category '+(ci+1)+'</h3>'+fld("Category name","cats."+ci+".name")+fld("Notice shown above items (optional)","cats."+ci+".notice");
     h+='<div class="ctl"><button data-a="mc" data-i="'+ci+'" data-d="-1">↑</button><button data-a="mc" data-i="'+ci+'" data-d="1">↓</button><button class="del" data-a="dc" data-i="'+ci+'">Delete category</button></div>';
@@ -80,6 +80,17 @@ async function save(){
     sha=j.content.sha;st("Saved! The live menu updates in about 1 minute.");
   }catch(e){st("Could not save: "+e.message)}
 }
+async function logoUp(inp){
+  var f=inp.files[0];if(!f)return;
+  st("Uploading logo…");
+  try{
+    var bmp=await createImageBitmap(f),s=Math.min(1,900/Math.max(bmp.width,bmp.height)),cv=document.createElement("canvas");
+    cv.width=Math.round(bmp.width*s);cv.height=Math.round(bmp.height*s);cv.getContext("2d").drawImage(bmp,0,0,cv.width,cv.height);
+    var data=cv.toDataURL("image/png").split(",")[1],name="images/logo"+Date.now()+".png";
+    await api(name,{method:"PUT",body:JSON.stringify({message:"Update logo",content:data,branch:CFG.branch})});
+    draft.logo=name;renderAdmin();st("Logo uploaded. Remember to Save & Publish.");
+  }catch(e){st("Logo upload failed: "+e.message)}
+}
 async function photo(inp){
   var f=inp.files[0];if(!f)return;var p=inp.getAttribute("data-ph").split(".");
   st("Uploading photo…");
@@ -93,7 +104,7 @@ async function photo(inp){
 }
 app.addEventListener("input",function(e){var t=e.target,p=t.getAttribute("data-p");if(!p||!draft)return;
   if(t.type=="checkbox")setp(p,t.checked);else if(t.type=="number")setp(p,parseFloat(t.value)||0);else setp(p,t.value)});
-app.addEventListener("change",function(e){if(e.target.getAttribute("data-ph"))photo(e.target)});
+app.addEventListener("change",function(e){if(e.target.getAttribute("data-ph"))photo(e.target);else if(e.target.getAttribute("data-logo"))logoUp(e.target)});
 app.addEventListener("click",function(e){
   var t=e.target,a=t.getAttribute("data-a");if(!a)return;
   if(a=="connect"){CFG={owner:document.getElementById("o").value.trim(),repo:document.getElementById("r").value.trim(),branch:document.getElementById("b").value.trim()||"main",token:document.getElementById("t").value.trim()};localStorage.setItem("hs_cfg",JSON.stringify(CFG));return load()}
@@ -109,6 +120,7 @@ app.addEventListener("click",function(e){
   else if(a=="ai")draft.cats[i].items.push({n:"New item",d:"",p:0,e:"🍽️",img:"",out:false});
   else if(a=="ac")draft.cats.push({name:"New category",notice:"",items:[]});
   else if(a=="rp")draft.cats[i].items[j].img="";
+  else if(a=="rl")draft.logo="";
   renderAdmin();
 });
 if(CFG.token)load();else login();
