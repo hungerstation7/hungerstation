@@ -17,11 +17,11 @@
      "out": false
     },
     {
-     "n": "Shashlik with Rice",
-     "d": "Grilled, marinated chicken skewers served on fragrant rice.",
+     "n": "Korean Sweet & Spicy Chicken with Fried Rice",
+     "d": "Special Korean sweet & spicy chicken with fried rice.",
      "p": 450,
      "e": "🍢",
-     "img": "images/p1794057456688.jpg",
+     "img": "images/p1794065453343.jpg",
      "out": false
     },
     {
@@ -207,11 +207,11 @@
      "out": false
     },
     {
-     "n": "Apple Pie (Special)",
+     "n": "Pineapple Whip (Special)",
      "d": "Special",
      "p": 250,
      "e": "🥧",
-     "img": "images/p1794058310818.jpg",
+     "img": "images/p1794065233575.jpg",
      "out": false
     }
    ]
@@ -264,6 +264,28 @@
      "p": 180,
      "e": "🍽️",
      "img": "images/p1794058384931.jpg",
+     "out": false
+    }
+   ]
+  },
+  {
+   "name": "Tandoori Platters",
+   "notice": "",
+   "items": [
+    {
+     "n": "Half Tandoori Platter",
+     "d": "",
+     "p": 2000,
+     "e": "🍽️",
+     "img": "images/p1794065190415.jpg",
+     "out": false
+    },
+    {
+     "n": "Full Tandoori Platter",
+     "d": "",
+     "p": 3500,
+     "e": "🍽️",
+     "img": "images/p1794065179299.jpg",
      "out": false
     }
    ]
