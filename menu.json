@@ -167,6 +167,14 @@
      "e": "🍽️",
      "img": "images/p1794061578807.jpg",
      "out": false
+    },
+    {
+     "n": "Chicken Bread",
+     "d": "Very tender, fresh and tasty chicken bread",
+     "p": 180,
+     "e": "🍽️",
+     "img": "images/p1794062907942.jpg",
+     "out": false
     }
    ]
   },
@@ -191,7 +199,7 @@
      "out": false
     },
     {
-     "n": "Brownies",
+     "n": "Classic Fudge Brownie",
      "d": "",
      "p": 300,
      "e": "🍫",
