@@ -37,13 +37,15 @@ h2{font-size:1.1rem;margin:18px 4px 8px}
 #order{display:block;width:100%;padding:14px;border-radius:12px;background:#25d366;color:#fff;font-size:1rem;font-weight:700;text-align:center;text-decoration:none}
 #copy{background:none;border:none;color:var(--mute);font-size:.8rem;text-decoration:underline;margin-top:6px;width:100%}
 #notes{width:100%;padding:9px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;margin-bottom:8px}
+.done{background:#e8f8ee;color:#14532d;border:1px solid #25d366;border-radius:12px;margin:10px 12px 0;padding:10px 12px;font-size:.9rem;text-align:center}
+.done button{display:block;margin:6px auto 0;background:none;border:none;color:#14532d;text-decoration:underline;font-size:.85rem}
 .msg{text-align:center;padding:40px 16px;color:var(--mute)}
 </style>
 </head>
 <body>
 <div id="app"><div class="msg">Loading menu…</div></div>
 <script>
-var D=null,cart={},flat={},app=document.getElementById("app");
+var saved=null,D=null,cart={},flat={},app=document.getElementById("app");
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function cur(){return D.cur||""}
 function renderMenu(){
@@ -79,11 +81,20 @@ function buildMsg(){
   for(var n in nt)msg+="\n\n⚠️ "+n;
   return msg;
 }
+function doneOrder(){
+  var n=document.getElementById("notes");
+  saved={cart:JSON.parse(JSON.stringify(cart)),notes:n?n.value:""};
+  cart={};renderMenu();window.scrollTo(0,0);
+  var d=document.createElement("div");d.className="done";
+  d.innerHTML='✅ Your order was sent to WhatsApp. Please press <b>Send</b> there to confirm.<button id="undo">Order not sent? Restore my order</button>';
+  app.insertBefore(d,app.firstChild);
+}
 function refresh(){var o=document.getElementById("order");if(!o)return;var m=buildMsg();if(m)o.href="https://wa.me/"+String(D.wa).replace(/\D/g,"")+"?text="+encodeURIComponent(m)}
 app.addEventListener("input",function(e){if(e.target.id=="notes")refresh()});
 app.addEventListener("click",function(e){
   var t=e.target;
-  if(t.id=="order")return;
+  if(t.id=="order"){if(buildMsg())setTimeout(doneOrder,800);return}
+  if(t.id=="undo"){if(saved){cart=saved.cart;renderMenu();document.getElementById("notes").value=saved.notes;refresh();saved=null}return}
   if(t.id=="copy"){var m=buildMsg();if(!m)return;try{navigator.clipboard.writeText(m).then(function(){t.textContent="Copied! Paste it in WhatsApp chat with "+D.cafe},function(){prompt("Copy this order:",m)})}catch(x){prompt("Copy this order:",m)}return}
   var c=t.getAttribute("data-c");
   if(c){[].forEach.call(document.getElementById("nav").children,function(b){b.classList.toggle("on",b===t)});document.getElementById(c).scrollIntoView({behavior:"smooth",block:"start"});return}
