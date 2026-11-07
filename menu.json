@@ -1,0 +1,262 @@
+{
+ "cafe": "Hunger Station",
+ "tagline": "Good Food - Big Mood! Choose & order",
+ "wa": "923313335187",
+ "cur": "Rs.",
+ "cats": [
+  {
+   "name": "Meals",
+   "notice": "",
+   "items": [
+    {
+     "n": "Chowmein",
+     "d": "Stir-fried noodles with vegetables and chicken, tossed in a savoury sauce.",
+     "p": 300,
+     "e": "🍜",
+     "img": "images/006b8f0b4bb35239fc5ce4514e96a376.jpg",
+     "out": false
+    },
+    {
+     "n": "Shashlik with Rice",
+     "d": "Grilled, marinated chicken skewers served on fragrant rice.",
+     "p": 450,
+     "e": "🍢",
+     "img": "images/5540589632f019bcf26765886bfc0919.jpg",
+     "out": false
+    },
+    {
+     "n": "Tandoori Chicken – Quarter Meal",
+     "d": "Quarter tandoori Tikka, 1 Paratha, vinegar Pickle, Special Dip",
+     "p": 500,
+     "e": "🍗",
+     "img": "images/f38aaf6a6ef0b98c85e7de220ce9d2c4.jpg",
+     "out": false
+    },
+    {
+     "n": "Tandoori Chicken – Boti",
+     "d": "Tender, marinated chicken pieces grilled in the tandoor and served hot with special chutney.",
+     "p": 400,
+     "e": "🍗",
+     "img": "images/f031faecbc43740323686c2c662acc11.jpg",
+     "out": false
+    },
+    {
+     "n": "Tandoori Chicken Eighth Meal",
+     "d": "A lighter portion of tandoori chicken with rice and sides. 1/8 tandoori Tikka, 1 Paratha, vinegar Pickle, Special Dip  ",
+     "p": 375,
+     "e": "🍽️",
+     "img": "images/dfcb61df73e9c2e81a7f7801ce048d7d.jpg",
+     "out": false
+    }
+   ]
+  },
+  {
+   "name": "Jacket Potatoes",
+   "notice": "Yummy and served hot",
+   "items": [
+    {
+     "n": "Jacket Potato with Chicken",
+     "d": "Baked potato loaded with seasoned chicken. Choose your sauce.",
+     "p": 400,
+     "e": "🥔",
+     "img": "images/2e5f6d5289ed55512331fe11f2ebca7c.jpg",
+     "out": false
+    },
+    {
+     "n": "Jacket Potato without Chicken but loaded with cheese",
+     "d": "Baked potato with a creamy, flavourful filling. Choose your sauce.",
+     "p": 350,
+     "e": "🥔",
+     "img": "images/4a7d79e161250d35f504266e4f945b60.jpg",
+     "out": false
+    }
+   ]
+  },
+  {
+   "name": "Ice Creams",
+   "notice": "Per scoop",
+   "items": [
+    {
+     "n": "Ice Cream",
+     "d": "Different flavours – mention flavour in notes",
+     "p": 0,
+     "e": "🍨",
+     "img": "",
+     "out": false
+    }
+   ]
+  },
+  {
+   "name": "Shakes",
+   "notice": "",
+   "items": [
+    {
+     "n": "Ice Cream Shake",
+     "d": "",
+     "p": 0,
+     "e": "🥤",
+     "img": "",
+     "out": false
+    },
+    {
+     "n": "Special Dry Nuts & Honey Shake",
+     "d": "Special",
+     "p": 0,
+     "e": "🥛",
+     "img": "",
+     "out": false
+    },
+    {
+     "n": "Fresh Fruit Shake",
+     "d": "",
+     "p": 0,
+     "e": "🍓",
+     "img": "",
+     "out": false
+    }
+   ]
+  },
+  {
+   "name": "Refreshments",
+   "notice": "",
+   "items": [
+    {
+     "n": "Dahi Bhallay",
+     "d": "Soft lentil dumplings in chilled yogurt with tangy chutneys.",
+     "p": 200,
+     "e": "🥣",
+     "img": "images/39422b7e479701a2ddee1d3eafa60df9.jpg",
+     "out": false
+    },
+    {
+     "n": "Fruit Chaat",
+     "d": "Fresh fruit tossed with a tangy, spiced chaat masala.",
+     "p": 300,
+     "e": "🍇",
+     "img": "images/3a4d7a31c44ad3145dcefbc60ff77692.jpg",
+     "out": false
+    },
+    {
+     "n": "Gol Gappay",
+     "d": "Crisp shells filled with spiced tangy water and chickpeas.",
+     "p": 220,
+     "e": "🧆",
+     "img": "images/237e4f9e7375e90bfa18a4e17769ed93.jpg",
+     "out": false
+    },
+    {
+     "n": "Samosas",
+     "d": "",
+     "p": 80,
+     "e": "🥟",
+     "img": "images/f80fd9e2f8236bb88b55e130d44b0881.jpg",
+     "out": false
+    },
+    {
+     "n": "Samosa Chaat",
+     "d": "Crushed samosas topped with yogurt, chutneys and spices.",
+     "p": 200,
+     "e": "🥟",
+     "img": "images/6f7bfff93d706030e5ef70c2999a2b5b.jpg",
+     "out": false
+    }
+   ]
+  },
+  {
+   "name": "Desserts",
+   "notice": "",
+   "items": [
+    {
+     "n": "Cheesecake",
+     "d": "",
+     "p": 350,
+     "e": "🍰",
+     "img": "images/c64722a4a3cee07d9b0f31d229daabe7.jpg",
+     "out": false
+    },
+    {
+     "n": "Mousse Cups",
+     "d": "",
+     "p": 250,
+     "e": "🍮",
+     "img": "images/7731926cef96f0d3eb9cdb1f7707e531.jpg",
+     "out": false
+    },
+    {
+     "n": "Brownies",
+     "d": "",
+     "p": 300,
+     "e": "🍫",
+     "img": "images/32f39533112dd2f460a2a7dca9ac94fc.jpg",
+     "out": false
+    },
+    {
+     "n": "Apple Pie (Special)",
+     "d": "Special",
+     "p": 250,
+     "e": "🥧",
+     "img": "images/4a2b6ddb4e1943519c96ab92287b49ef.jpg",
+     "out": false
+    }
+   ]
+  },
+  {
+   "name": "Special Occasion Cakes",
+   "notice": "Made to order. Next-day delivery. Advance ordering required.",
+   "items": [
+    {
+     "n": "Birthday Cake",
+     "d": "Per pound. Ask for the available variety ",
+     "p": 1750,
+     "e": "🎂",
+     "img": "images/eec906797a8c75637ce8162c72f121fb.jpg",
+     "out": false
+    },
+    {
+     "n": "Bento Cake",
+     "d": "1 pound. Ask for the available variety ",
+     "p": 2000,
+     "e": "🍰",
+     "img": "images/2e728bb8cb9c0f021a716c53be5385a5.jpg",
+     "out": false
+    },
+    {
+     "n": "Customized Cake",
+     "d": "Share your design in notes. Price is per pound",
+     "p": 2500,
+     "e": "🎂",
+     "img": "images/4c309e2e4ed240fa22c2c89120ed61d2.jpg",
+     "out": false
+    }
+   ]
+  },
+  {
+   "name": "Hot Beverage ",
+   "notice": "",
+   "items": [
+    {
+     "n": "Karak Chai",
+     "d": "",
+     "p": 80,
+     "e": "",
+     "img": "images/87620e5c74bc898f5ddefe86c0e404ba.jpg",
+     "out": false
+    },
+    {
+     "n": "Signature Coffee",
+     "d": "",
+     "p": 180,
+     "e": "🍽️",
+     "img": "images/9dcb81547b86f152e6ed78a21c2d6a94.jpg",
+     "out": false
+    }
+   ]
+  },
+  {
+   "name": "New category",
+   "notice": "",
+   "items": []
+  }
+ ],
+ "logo": "images/logo.png"
+}

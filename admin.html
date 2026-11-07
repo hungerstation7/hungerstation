@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Menu Admin</title>
+<style>
+:root{--bg:#fff8f0;--card:#fff;--ink:#2b1d14;--mute:#7a6a5d;--accent:#d9480f;--line:#f0e2d3;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#1b1410;--card:#271d17;--ink:#f6ece3;--mute:#b8a698;--accent:#ff8a4c;--line:#3a2c23;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.adm{max-width:680px;margin:auto;padding:12px 12px 80px}
+input[type=text],input[type=password],input[type=number]{width:100%;padding:9px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+.abar{position:sticky;top:0;z-index:15;display:flex;gap:8px;align-items:center;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line)}
+.abar b{flex:1}
+button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 12px;border-radius:10px;font:inherit;font-size:.85rem}
+button.pri{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
+button.del{color:#c92a2a}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin:12px 0}
+h3{margin:0 0 8px;font-size:1rem}
+label{display:block;font-size:.78rem;color:var(--mute);margin:8px 0 3px}
+.ai{border:1px solid var(--line);border-radius:12px;padding:10px;margin-top:10px}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ctl{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;align-items:center}
+.ctl label{display:inline-flex;gap:6px;align-items:center;margin:0}
+#st{margin:8px 0;font-size:.9rem;color:var(--accent);font-weight:600;min-height:1.2em}
+.hint{color:var(--mute);font-size:.82rem}
+</style>
+</head>
+<body>
+<div class="adm"><h2>Menu Admin</h2><div id="st"></div><div id="app"></div></div>
+<script>
+var CFG=JSON.parse(localStorage.getItem("hs_cfg")||"{}"),draft=null,sha=null,app=document.getElementById("app");
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function st(m){document.getElementById("st").textContent=m||""}
+function b64e(s){return btoa(unescape(encodeURIComponent(s)))}
+function b64d(s){return decodeURIComponent(escape(atob(s.replace(/\n/g,""))))}
+async function api(path,opt){
+  opt=opt||{};var h={Authorization:"Bearer "+CFG.token,Accept:"application/vnd.github+json"};
+  if(opt.body)h["Content-Type"]="application/json";
+  var url="https://api.github.com/repos/"+CFG.owner+"/"+CFG.repo+"/contents/"+path+(opt.method?"":"?ref="+encodeURIComponent(CFG.branch)+"&t="+Date.now());
+  var r=await fetch(url,{method:opt.method||"GET",headers:h,body:opt.body,cache:"no-store"});
+  var j=await r.json();if(!r.ok)throw new Error(j.message||("Error "+r.status));return j;
+}
+function login(msg){
+  app.innerHTML='<section><h3>Connect to your GitHub repository</h3><p class="hint">One-time setup on this device. See README for how to create the token.</p><label>GitHub username</label><input type="text" id="o" value="'+esc(CFG.owner||"")+'"><label>Repository name</label><input type="text" id="r" value="'+esc(CFG.repo||"")+'"><label>Branch</label><input type="text" id="b" value="'+esc(CFG.branch||"main")+'"><label>Access token</label><input type="password" id="t" value="'+esc(CFG.token||"")+'"><div class="ctl"><button class="pri" data-a="connect">Connect</button></div></section>';
+  st(msg||"");
+}
+async function load(){
+  st("Loading menu…");
+  try{var j=await api("menu.json");sha=j.sha;draft=JSON.parse(b64d(j.content));st("");renderAdmin()}
+  catch(e){login("Could not connect: "+e.message)}
+}
+function getp(p){var o=draft;p.split(".").forEach(function(k){o=o[k]});return o}
+function setp(p,v){var a=p.split("."),l=a.pop(),o=draft;a.forEach(function(k){o=o[k]});o[l]=v}
+function fld(label,p,type){return '<label>'+label+'</label><input type="'+(type||"text")+'" data-p="'+p+'" value="'+esc(getp(p))+'"'+(type=="number"?' min="0" step="any"':'')+'>'}
+function renderAdmin(){
+  var h='<div class="abar"><b>Editing menu</b><button data-a="logout">Disconnect</button><button class="pri" data-a="save">Save &amp; Publish</button></div>';
+  h+='<section><h3>Café settings</h3>'+fld("Café name","cafe")+fld("Tagline","tagline")+fld("WhatsApp number (country code, digits only)","wa")+fld("Currency symbol","cur")+'</section>';
+  draft.cats.forEach(function(c,ci){
+    h+='<section><h3>Category '+(ci+1)+'</h3>'+fld("Category name","cats."+ci+".name")+fld("Notice shown above items (optional)","cats."+ci+".notice");
+    h+='<div class="ctl"><button data-a="mc" data-i="'+ci+'" data-d="-1">↑</button><button data-a="mc" data-i="'+ci+'" data-d="1">↓</button><button class="del" data-a="dc" data-i="'+ci+'">Delete category</button></div>';
+    c.items.forEach(function(it,ii){
+      var b="cats."+ci+".items."+ii+".";
+      h+='<div class="ai"><b>'+esc(it.n||"New item")+'</b>'+fld("Name",b+"n")+fld("Description (optional)",b+"d")+'<div class="g"><div>'+fld("Price (0 = price on request)",b+"p","number")+'</div><div>'+fld("Emoji",b+"e")+'</div></div>';
+      h+='<div class="ctl">'+(it.img?'<img src="'+esc(it.img)+'" width="48" height="48" style="border-radius:8px;object-fit:cover" alt="">':'')+'<button data-a="pick">📷 Choose photo</button><input type="file" accept="image/*" data-ph="'+ci+"."+ii+'" style="display:none">'+(it.img?'<button data-a="rp" data-i="'+ci+'" data-j="'+ii+'">Remove photo</button>':'')+'</div>';
+      h+='<div class="ctl"><label><input type="checkbox" data-p="'+b+'out"'+(it.out?' checked':'')+'> Sold out</label><button data-a="mi" data-i="'+ci+'" data-j="'+ii+'" data-d="-1">↑</button><button data-a="mi" data-i="'+ci+'" data-j="'+ii+'" data-d="1">↓</button><button class="del" data-a="di" data-i="'+ci+'" data-j="'+ii+'">Delete</button></div></div>';
+    });
+    h+='<div class="ctl"><button data-a="ai" data-i="'+ci+'">+ Add item</button></div></section>';
+  });
+  h+='<button data-a="ac">+ Add category</button> <button class="pri" data-a="save">Save &amp; Publish</button>';
+  app.innerHTML=h;
+}
+function move(arr,i,d){var j=i+d;if(j<0||j>=arr.length)return;var t=arr[i];arr[i]=arr[j];arr[j]=t}
+async function save(){
+  st("Saving…");
+  try{
+    var j=await api("menu.json",{method:"PUT",body:JSON.stringify({message:"Update menu",content:b64e(JSON.stringify(draft,null,1)),sha:sha,branch:CFG.branch})});
+    sha=j.content.sha;st("Saved! The live menu updates in about 1 minute.");
+  }catch(e){st("Could not save: "+e.message)}
+}
+async function photo(inp){
+  var f=inp.files[0];if(!f)return;var p=inp.getAttribute("data-ph").split(".");
+  st("Uploading photo…");
+  try{
+    var bmp=await createImageBitmap(f),s=Math.min(1,800/Math.max(bmp.width,bmp.height)),cv=document.createElement("canvas");
+    cv.width=Math.round(bmp.width*s);cv.height=Math.round(bmp.height*s);cv.getContext("2d").drawImage(bmp,0,0,cv.width,cv.height);
+    var data=cv.toDataURL("image/jpeg",.82).split(",")[1],name="images/p"+Date.now()+".jpg";
+    await api(name,{method:"PUT",body:JSON.stringify({message:"Add photo",content:data,branch:CFG.branch})});
+    draft.cats[p[0]].items[p[1]].img=name;renderAdmin();st("Photo uploaded. Remember to Save & Publish.");
+  }catch(e){st("Photo upload failed: "+e.message)}
+}
+app.addEventListener("input",function(e){var t=e.target,p=t.getAttribute("data-p");if(!p||!draft)return;
+  if(t.type=="checkbox")setp(p,t.checked);else if(t.type=="number")setp(p,parseFloat(t.value)||0);else setp(p,t.value)});
+app.addEventListener("change",function(e){if(e.target.getAttribute("data-ph"))photo(e.target)});
+app.addEventListener("click",function(e){
+  var t=e.target,a=t.getAttribute("data-a");if(!a)return;
+  if(a=="connect"){CFG={owner:document.getElementById("o").value.trim(),repo:document.getElementById("r").value.trim(),branch:document.getElementById("b").value.trim()||"main",token:document.getElementById("t").value.trim()};localStorage.setItem("hs_cfg",JSON.stringify(CFG));return load()}
+  if(a=="logout"){localStorage.removeItem("hs_cfg");CFG={};draft=null;return login()}
+  if(!draft)return;
+  if(a=="pick"){var fi=t.parentNode.querySelector("input[type=file]");if(fi)fi.click();return}
+  if(a=="save")return save();
+  var i=+t.getAttribute("data-i"),j=+t.getAttribute("data-j"),d=+t.getAttribute("data-d");
+  if(a=="mc")move(draft.cats,i,d);
+  else if(a=="mi")move(draft.cats[i].items,j,d);
+  else if(a=="dc"){if(!confirm("Delete this category and all its items?"))return;draft.cats.splice(i,1)}
+  else if(a=="di"){if(!confirm("Delete this item?"))return;draft.cats[i].items.splice(j,1)}
+  else if(a=="ai")draft.cats[i].items.push({n:"New item",d:"",p:0,e:"🍽️",img:"",out:false});
+  else if(a=="ac")draft.cats.push({name:"New category",notice:"",items:[]});
+  else if(a=="rp")draft.cats[i].items[j].img="";
+  renderAdmin();
+});
+if(CFG.token)load();else login();
+</script>
+</body>
+</html>

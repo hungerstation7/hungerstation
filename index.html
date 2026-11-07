@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hunger Station Café – Menu</title>
+<style>
+:root{--bg:#fff8f0;--card:#fff;--ink:#2b1d14;--mute:#7a6a5d;--accent:#d9480f;--line:#f0e2d3;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#1b1410;--card:#271d17;--ink:#f6ece3;--mute:#b8a698;--accent:#ff8a4c;--line:#3a2c23;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:140px}
+header{padding:16px 16px 8px;text-align:center}
+.logo{display:block;width:78%;max-width:320px;height:auto;margin:0 auto;background:#fff;border-radius:18px;padding:6px}
+h1.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.sub{color:var(--mute);font-size:.9rem;margin-top:8px}
+nav{position:sticky;top:0;background:var(--bg);display:flex;gap:8px;overflow-x:auto;padding:10px 12px;border-bottom:1px solid var(--line);z-index:5}
+nav button{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 14px;border-radius:20px;font-size:.9rem}
+nav button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+main{padding:12px;max-width:640px;margin:auto}
+h2{font-size:1.1rem;margin:18px 4px 8px}
+.item{display:flex;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;margin-bottom:10px;align-items:center}
+.item.out{opacity:.5}
+.pic{width:76px;height:76px;border-radius:10px;background:var(--line);display:flex;align-items:center;justify-content:center;font-size:2.2rem;flex:none;overflow:hidden}
+.pic img{width:100%;height:100%;object-fit:cover}
+.info{flex:1;min-width:0}
+.name{font-weight:600}
+.desc{color:var(--mute);font-size:.82rem;margin:2px 0}
+.price{color:var(--accent);font-weight:700}
+.notice{background:var(--card);border:1px dashed var(--accent);color:var(--accent);border-radius:10px;padding:8px 12px;font-size:.85rem;font-weight:600;margin:0 0 10px}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:34px;height:34px;border-radius:50%;border:none;background:var(--accent);color:#fff;font-size:1.2rem}
+.qty button.minus{background:var(--line);color:var(--ink)}
+.qty span{min-width:18px;text-align:center;font-weight:600}
+#bar{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:none;z-index:10}
+#bar.show{display:block}
+#bar .row{display:flex;justify-content:space-between;font-weight:600;margin-bottom:8px}
+#order{display:block;width:100%;padding:14px;border-radius:12px;background:#25d366;color:#fff;font-size:1rem;font-weight:700;text-align:center;text-decoration:none}
+#copy{background:none;border:none;color:var(--mute);font-size:.8rem;text-decoration:underline;margin-top:6px;width:100%}
+#notes{width:100%;padding:9px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;margin-bottom:8px}
+.msg{text-align:center;padding:40px 16px;color:var(--mute)}
+</style>
+</head>
+<body>
+<div id="app"><div class="msg">Loading menu…</div></div>
+<script>
+var D=null,cart={},flat={},app=document.getElementById("app");
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function cur(){return D.cur||""}
+function renderMenu(){
+  var nav="",h="",id=0;flat={};
+  D.cats.forEach(function(c,ci){
+    if(!c.items.length)return;
+    nav+='<button data-c="c'+ci+'"'+(nav?'':' class="on"')+'>'+esc(c.name)+'</button>';
+    h+='<h2 id="c'+ci+'">'+esc(c.name)+'</h2>'+(c.notice?'<div class="notice">⚠️ '+esc(c.notice)+'</div>':'');
+    c.items.forEach(function(it){
+      var k=++id;flat[k]={it:it,c:c};
+      var pic=it.img?'<img src="'+esc(it.img)+'" alt="" loading="lazy">':esc(it.e||"🍽️");
+      var qty=it.out?'<div class="price">Sold out</div>':'<div class="qty"><button class="minus" data-k="'+k+'" data-d="-1">−</button><span id="q'+k+'">'+(cart[k]||0)+'</span><button data-k="'+k+'" data-d="1">+</button></div>';
+      h+='<div class="item'+(it.out?' out':'')+'"><div class="pic">'+pic+'</div><div class="info"><div class="name">'+esc(it.n)+'</div>'+(it.d?'<div class="desc">'+esc(it.d)+'</div>':'')+'<div class="price">'+(it.p>0?esc(cur())+' '+it.p:'Price on request')+'</div></div>'+qty+'</div>';
+    });
+  });
+  document.title=D.cafe+" – Menu";
+  app.innerHTML='<header>'+(D.logo?'<img class="logo" src="'+esc(D.logo)+'" alt="'+esc(D.cafe)+'">':'')+'<h1 class="'+(D.logo?'vh':'')+'">'+esc(D.cafe)+'</h1><div class="sub">'+esc(D.tagline)+'</div></header><nav id="nav">'+nav+'</nav><main>'+h+'</main><div id="bar"><div class="row"><span id="count"></span><span id="total"></span></div><input type="text" id="notes" placeholder="Notes (e.g. less spicy, flavour, sauce)"><a id="order" target="_blank" rel="noopener noreferrer" href="#">Order on WhatsApp</a><button id="copy">Link not opening? Copy order text</button></div>';
+  update();
+}
+function update(){var n=0,t=0,u=false;for(var k in cart){var v=cart[k];if(v>0&&flat[k]){n+=v;if(flat[k].it.p>0)t+=v*flat[k].it.p;else u=true}}
+  var b=document.getElementById("bar");if(!b)return;
+  b.classList.toggle("show",n>0);
+  document.getElementById("count").textContent=n+" item"+(n==1?"":"s");
+  document.getElementById("total").textContent=t>0?(cur()+" "+t+(u?" +":"")):"";refresh();}
+function buildMsg(){
+  var lines=[],t=0,nt={};
+  for(var k in cart){if(cart[k]>0&&flat[k]){var it=flat[k].it,s=cart[k]*it.p;t+=s;
+    lines.push("• "+cart[k]+" x "+it.n+(it.p>0?" – "+cur()+" "+s:""));
+    if(flat[k].c.notice)nt[flat[k].c.notice]=1}}
+  if(!lines.length)return "";
+  var note=document.getElementById("notes").value.trim();
+  var msg="*New Takeaway Order – "+D.cafe+"*\n\n"+lines.join("\n")+(t>0?"\n\n*Total: "+cur()+" "+t+"*":"")+(note?"\n\nNotes: "+note:"");
+  for(var n in nt)msg+="\n\n⚠️ "+n;
+  return msg;
+}
+function refresh(){var o=document.getElementById("order");if(!o)return;var m=buildMsg();if(m)o.href="https://wa.me/"+String(D.wa).replace(/\D/g,"")+"?text="+encodeURIComponent(m)}
+app.addEventListener("input",function(e){if(e.target.id=="notes")refresh()});
+app.addEventListener("click",function(e){
+  var t=e.target;
+  if(t.id=="order")return;
+  if(t.id=="copy"){var m=buildMsg();if(!m)return;try{navigator.clipboard.writeText(m).then(function(){t.textContent="Copied! Paste it in WhatsApp chat with "+D.cafe},function(){prompt("Copy this order:",m)})}catch(x){prompt("Copy this order:",m)}return}
+  var c=t.getAttribute("data-c");
+  if(c){[].forEach.call(document.getElementById("nav").children,function(b){b.classList.toggle("on",b===t)});document.getElementById(c).scrollIntoView({behavior:"smooth",block:"start"});return}
+  var k=t.getAttribute("data-k");
+  if(k){var v=Math.max(0,(cart[k]||0)+parseInt(t.getAttribute("data-d"),10));cart[k]=v;document.getElementById("q"+k).textContent=v;update()}
+});
+fetch("menu.json?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){D=j;renderMenu()}).catch(function(){app.innerHTML='<div class="msg">Sorry, the menu could not be loaded. Please refresh the page.</div>'});
+</script>
+</body>
+</html>
