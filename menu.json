@@ -191,7 +191,7 @@
      "out": false
     },
     {
-     "n": "Mousse Cups",
+     "n": "Chocolate Sundae ",
      "d": "",
      "p": 250,
      "e": "🍮",
@@ -282,7 +282,7 @@
     },
     {
      "n": "Full Tandoori Platter",
-     "d": "",
+     "d": "Pre order for next day",
      "p": 3500,
      "e": "🍽️",
      "img": "images/p1794065179299.jpg",
@@ -292,7 +292,7 @@
   },
   {
    "name": "New category",
-   "notice": "",
+   "notice": "Pre order for next day",
    "items": []
   }
  ],
