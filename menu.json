@@ -159,6 +159,14 @@
      "e": "🥟",
      "img": "images/p1794058258594.jpg",
      "out": false
+    },
+    {
+     "n": "Paapri Chat",
+     "d": "",
+     "p": 0,
+     "e": "🍽️",
+     "img": "images/p1794059907251.jpg",
+     "out": false
     }
    ]
   },
@@ -248,14 +256,6 @@
      "p": 180,
      "e": "🍽️",
      "img": "images/p1794058384931.jpg",
-     "out": false
-    },
-    {
-     "n": "Papri Chat",
-     "d": "",
-     "p": 200,
-     "e": "🍽️",
-     "img": "images/p1794058420858.jpg",
      "out": false
     }
    ]
