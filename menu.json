@@ -19,7 +19,7 @@
     {
      "n": "Korean Sweet & Spicy Chicken with Fried Rice",
      "d": "Special Korean sweet & spicy chicken with fried rice.",
-     "p": 400,
+     "p": 350,
      "e": "🍢",
      "img": "images/p1794065685760.jpg",
      "out": false
@@ -123,7 +123,7 @@
     {
      "n": "Dahi Bhallay",
      "d": "Soft lentil dumplings in chilled yogurt with tangy chutneys.",
-     "p": 220,
+     "p": 250,
      "e": "🥣",
      "img": "images/p1794058179851.jpg",
      "out": false
@@ -131,7 +131,7 @@
     {
      "n": "Fruit Chaat",
      "d": "Fresh fruit tossed with a tangy, spiced chaat masala.",
-     "p": 300,
+     "p": 350,
      "e": "🍇",
      "img": "images/p1794058213844.jpg",
      "out": false
@@ -155,7 +155,7 @@
     {
      "n": "Samosa Chaat",
      "d": "Crushed samosas topped with yogurt, chutneys and spices.",
-     "p": 170,
+     "p": 150,
      "e": "🥟",
      "img": "images/p1794058258594.jpg",
      "out": false
