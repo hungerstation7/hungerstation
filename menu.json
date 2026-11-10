@@ -291,9 +291,18 @@
    ]
   },
   {
-   "name": "New category",
-   "notice": "Pre order for next day",
-   "items": []
+   "name": "Drinks",
+   "notice": "",
+   "items": [
+    {
+     "n": "Water Small",
+     "d": "",
+     "p": 0,
+     "e": "🍽️",
+     "img": "",
+     "out": false
+    }
+   ]
   }
  ],
  "logo": "images/logo1794059056859.png"
