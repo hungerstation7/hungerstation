@@ -11,7 +11,7 @@
     {
      "n": "Chowmein",
      "d": "Stir-fried noodles with vegetables and chicken, tossed in a savoury sauce.",
-     "p": 300,
+     "p": 280,
      "e": "🍜",
      "img": "images/p1794057419888.jpg",
      "out": false
@@ -19,7 +19,7 @@
     {
      "n": "Korean Sweet & Spicy Chicken with Fried Rice",
      "d": "Special Korean sweet & spicy chicken with fried rice.",
-     "p": 450,
+     "p": 400,
      "e": "🍢",
      "img": "images/p1794065685760.jpg",
      "out": false
@@ -27,7 +27,7 @@
     {
      "n": "Tandoori Chicken – Quarter Meal",
      "d": "Quarter tandoori Tikka, 1 Paratha, vinegar Pickle, Special Dip",
-     "p": 500,
+     "p": 550,
      "e": "🍗",
      "img": "images/p1794058088796.jpg",
      "out": false
@@ -35,7 +35,7 @@
     {
      "n": "Tandoori Chicken Paratha Roll",
      "d": "Tender, marinated chicken pieces grilled in the tandoor and rolled in Paratha with special chutney, sauce & masala",
-     "p": 250,
+     "p": 280,
      "e": "🍗",
      "img": "images/p1794155848269.jpg",
      "out": false
@@ -43,7 +43,7 @@
     {
      "n": "Tandoori Chicken Eighth Meal",
      "d": "A lighter portion of tandoori chicken with rice and sides. 1/8 tandoori Tikka, 1 Paratha, vinegar Pickle, Special Dip  ",
-     "p": 375,
+     "p": 400,
      "e": "🍽️",
      "img": "images/p1794066811597.jpg",
      "out": false
@@ -57,7 +57,7 @@
     {
      "n": "Jacket Potato with Chicken",
      "d": "Baked potato loaded with seasoned chicken. Choose your sauce.",
-     "p": 400,
+     "p": 370,
      "e": "🥔",
      "img": "images/p1794058137286.jpg",
      "out": false
@@ -65,7 +65,7 @@
     {
      "n": "Jacket Potato without Chicken but loaded with cheese",
      "d": "Baked potato with a cheezy creamy, flavourful filling. Choose your sauce.",
-     "p": 350,
+     "p": 280,
      "e": "🥔",
      "img": "images/p1794062481942.jpg",
      "out": false
@@ -123,7 +123,7 @@
     {
      "n": "Dahi Bhallay",
      "d": "Soft lentil dumplings in chilled yogurt with tangy chutneys.",
-     "p": 200,
+     "p": 220,
      "e": "🥣",
      "img": "images/p1794058179851.jpg",
      "out": false
@@ -139,7 +139,7 @@
     {
      "n": "Gol Gappay",
      "d": "Crisp shells filled with spiced tangy water and chickpeas.",
-     "p": 220,
+     "p": 230,
      "e": "🧆",
      "img": "images/p1794058244089.jpg",
      "out": false
@@ -147,7 +147,7 @@
     {
      "n": "Samosas",
      "d": "",
-     "p": 80,
+     "p": 70,
      "e": "🥟",
      "img": "images/p1794058269195.jpg",
      "out": false
@@ -155,7 +155,7 @@
     {
      "n": "Samosa Chaat",
      "d": "Crushed samosas topped with yogurt, chutneys and spices.",
-     "p": 200,
+     "p": 170,
      "e": "🥟",
      "img": "images/p1794058258594.jpg",
      "out": false
@@ -163,7 +163,7 @@
     {
      "n": "Paapri Chat",
      "d": "",
-     "p": 200,
+     "p": 210,
      "e": "🍽️",
      "img": "images/p1794061578807.jpg",
      "out": false
@@ -185,7 +185,7 @@
     {
      "n": "Chocolate Fudge Cake Piece",
      "d": "",
-     "p": 350,
+     "p": 180,
      "e": "🍰",
      "img": "images/p1794065657187.jpg",
      "out": false
@@ -193,7 +193,7 @@
     {
      "n": "Chocolate Sundae ",
      "d": "",
-     "p": 250,
+     "p": 260,
      "e": "🍮",
      "img": "images/p1794066064347.jpg",
      "out": false
@@ -223,7 +223,7 @@
     {
      "n": "Birthday Cake",
      "d": "Per pound. Ask for the available variety ",
-     "p": 1750,
+     "p": 1950,
      "e": "🎂",
      "img": "images/p1794058324259.jpg",
      "out": false
@@ -231,7 +231,7 @@
     {
      "n": "Bento Cake",
      "d": "1 pound. Ask for the available variety ",
-     "p": 2000,
+     "p": 1500,
      "e": "🍰",
      "img": "images/p1794058341981.jpg",
      "out": false
@@ -239,7 +239,7 @@
     {
      "n": "Customized Cake",
      "d": "Share your design in notes. Price is per pound",
-     "p": 2500,
+     "p": 3000,
      "e": "🎂",
      "img": "images/p1794058356828.jpg",
      "out": false
@@ -275,7 +275,7 @@
     {
      "n": "Half Tandoori Platter",
      "d": "Only on Pre order for next day",
-     "p": 2000,
+     "p": 1800,
      "e": "🍽️",
      "img": "images/p1794065190415.jpg",
      "out": false
@@ -283,7 +283,7 @@
     {
      "n": "Full Tandoori Platter",
      "d": "Only on Pre order for next day",
-     "p": 3500,
+     "p": 3200,
      "e": "🍽️",
      "img": "images/p1794065179299.jpg",
      "out": false
