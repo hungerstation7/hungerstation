@@ -1,27 +1,27 @@
 {
- "cafe": "Sobia's Kitchen",
- "tagline": "Quality Food, Desi Style",
- "wa": "447414653965",
- "cur": "£",
+ "cafe": "Hunger Station",
+ "tagline": "Good Food - Big Mood! Choose & order",
+ "wa": "923313335187",
+ "cur": "Rs.",
  "cats": [
   {
    "name": "Meals",
    "notice": "",
    "items": [
     {
-     "n": "Daal Mash",
-     "d": "Dhaba Style Daal Mash",
-     "p": 5,
+     "n": "Chowmein",
+     "d": "Stir-fried noodles with vegetables and chicken, tossed in a savoury sauce.",
+     "p": 280,
      "e": "🍜",
-     "img": "images/p1794296738427.jpg",
+     "img": "images/p1794057419888.jpg",
      "out": false
     },
     {
-     "n": "Seekh Kebab Masala",
+     "n": "Korean Sweet & Spicy Chicken with Fried Rice",
      "d": "Special Korean sweet & spicy chicken with fried rice.",
-     "p": 8,
+     "p": 400,
      "e": "🍢",
-     "img": "images/p1794296767212.jpg",
+     "img": "images/p1794065685760.jpg",
      "out": false
     },
     {
@@ -296,5 +296,5 @@
    "items": []
   }
  ],
- "logo": "images/logo1794296619937.png"
+ "logo": "images/logo1794059056859.png"
 }
