@@ -301,6 +301,76 @@
      "e": "🍽️",
      "img": "",
      "out": false
+    },
+    {
+     "n": "Water 1.5 Ltr",
+     "d": "",
+     "p": 0,
+     "e": "🍽️",
+     "img": "",
+     "out": false
+    },
+    {
+     "n": "Fizzy Small",
+     "d": "Coke, Sprit, Cola Next etc",
+     "p": 0,
+     "e": "🍽️",
+     "img": "",
+     "out": false
+    },
+    {
+     "n": "Fizzy 1.5 Ltr",
+     "d": "Coke, Sprit, Cola Next etc",
+     "p": 0,
+     "e": "🍽️",
+     "img": "",
+     "out": false
+    }
+   ]
+  },
+  {
+   "name": "The Chill Bar",
+   "notice": "",
+   "items": [
+    {
+     "n": "Blue Lagood",
+     "d": "",
+     "p": 0,
+     "e": "🍽️",
+     "img": "",
+     "out": false
+    },
+    {
+     "n": "Classic Zing",
+     "d": "Classic Lemonade",
+     "p": 0,
+     "e": "🍽️",
+     "img": "",
+     "out": false
+    },
+    {
+     "n": "Minty Fresh",
+     "d": "",
+     "p": 0,
+     "e": "🍽️",
+     "img": "",
+     "out": false
+    },
+    {
+     "n": "Green Apple",
+     "d": "",
+     "p": 0,
+     "e": "🍽️",
+     "img": "",
+     "out": false
+    },
+    {
+     "n": "Peach Paradise",
+     "d": "",
+     "p": 0,
+     "e": "🍽️",
+     "img": "",
+     "out": false
     }
    ]
   }
