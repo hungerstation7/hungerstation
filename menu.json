@@ -131,7 +131,7 @@
     {
      "n": "Fruit Chaat",
      "d": "Fresh fruit tossed with a tangy, spiced chaat masala.",
-     "p": 350,
+     "p": 230,
      "e": "🍇",
      "img": "images/p1794058213844.jpg",
      "out": false
@@ -139,7 +139,7 @@
     {
      "n": "Gol Gappay",
      "d": "Crisp shells filled with spiced tangy water and chickpeas.",
-     "p": 230,
+     "p": 190,
      "e": "🧆",
      "img": "images/p1794058244089.jpg",
      "out": false
@@ -147,7 +147,7 @@
     {
      "n": "Samosas",
      "d": "",
-     "p": 70,
+     "p": 60,
      "e": "🥟",
      "img": "images/p1794058269195.jpg",
      "out": false
@@ -155,7 +155,7 @@
     {
      "n": "Samosa Chaat",
      "d": "Crushed samosas topped with yogurt, chutneys and spices.",
-     "p": 150,
+     "p": 140,
      "e": "🥟",
      "img": "images/p1794058258594.jpg",
      "out": false
@@ -272,6 +272,22 @@
      "p": 180,
      "e": "🍽️",
      "img": "images/p1794058384931.jpg",
+     "out": false
+    },
+    {
+     "n": "Hot Chocolate (Classic)",
+     "d": "",
+     "p": 230,
+     "e": "🍽️",
+     "img": "images/p1794469879522.jpg",
+     "out": false
+    },
+    {
+     "n": "Hot Chocolate (Premium)",
+     "d": "",
+     "p": 260,
+     "e": "🍽️",
+     "img": "images/p1794469909945.jpg",
      "out": false
     }
    ]
