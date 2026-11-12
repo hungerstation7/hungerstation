@@ -359,7 +359,7 @@
     {
      "n": "Blue Lagood",
      "d": "",
-     "p": 0,
+     "p": 250,
      "e": "🍽️",
      "img": "images/p1794326129809.jpg",
      "out": false
@@ -367,7 +367,7 @@
     {
      "n": "Classic Zing",
      "d": "Classic Lemonade",
-     "p": 0,
+     "p": 216,
      "e": "🍽️",
      "img": "images/p1794326154336.jpg",
      "out": false
@@ -375,7 +375,7 @@
     {
      "n": "Minty Fresh",
      "d": "",
-     "p": 0,
+     "p": 220,
      "e": "🍽️",
      "img": "images/p1794326167068.jpg",
      "out": false
@@ -383,7 +383,7 @@
     {
      "n": "Green Apple",
      "d": "",
-     "p": 0,
+     "p": 220,
      "e": "🍽️",
      "img": "images/p1794326175243.jpg",
      "out": false
@@ -391,9 +391,17 @@
     {
      "n": "Peach Paradise",
      "d": "",
-     "p": 0,
+     "p": 220,
      "e": "🍽️",
      "img": "images/p1794326183855.jpg",
+     "out": false
+    },
+    {
+     "n": "Desi Cooler",
+     "d": "Ilmi & Allu Bukhara Chatpata Drink ",
+     "p": 220,
+     "e": "🍽️",
+     "img": "images/p1794475466491.jpg",
      "out": false
     }
    ]
