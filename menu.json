@@ -335,7 +335,7 @@
      "out": false
     },
     {
-     "n": "Fizzy Small",
+     "n": "Fizzy 0.5L",
      "d": "Coke, Sprit, Cola Next etc",
      "p": 0,
      "e": "🍽️",
@@ -348,6 +348,14 @@
      "p": 0,
      "e": "🍽️",
      "img": "images/p1794326100094.jpg",
+     "out": false
+    },
+    {
+     "n": "Fizzy 350 ML",
+     "d": "",
+     "p": 90,
+     "e": "🍽️",
+     "img": "images/p1794477928399.jpg",
      "out": false
     }
    ]
