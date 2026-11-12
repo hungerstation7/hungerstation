@@ -321,7 +321,7 @@
     {
      "n": "Water Small",
      "d": "",
-     "p": 0,
+     "p": 60,
      "e": "🍽️",
      "img": "images/p1794326062875.jpg",
      "out": false
@@ -329,7 +329,7 @@
     {
      "n": "Water 1.5 Ltr",
      "d": "",
-     "p": 0,
+     "p": 130,
      "e": "🍽️",
      "img": "images/p1794326074101.jpg",
      "out": false
@@ -337,7 +337,7 @@
     {
      "n": "Fizzy 0.5L",
      "d": "Coke, Sprit, Cola Next etc",
-     "p": 0,
+     "p": 120,
      "e": "🍽️",
      "img": "images/p1794326086985.jpg",
      "out": false
@@ -345,7 +345,7 @@
     {
      "n": "Fizzy 1.5 Ltr",
      "d": "Coke, Sprit, Cola Next etc",
-     "p": 0,
+     "p": 220,
      "e": "🍽️",
      "img": "images/p1794326100094.jpg",
      "out": false
