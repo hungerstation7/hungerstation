@@ -365,7 +365,7 @@
    "notice": "",
    "items": [
     {
-     "n": "Blue Lagood",
+     "n": "Blue Lagoon",
      "d": "",
      "p": 250,
      "e": "🍽️",
@@ -373,17 +373,17 @@
      "out": false
     },
     {
-     "n": "Classic Zing",
-     "d": "Classic Lemonade",
+     "n": "Blueberry Lemonade",
+     "d": "Blueberry Lemonade",
      "p": 220,
      "e": "🍽️",
      "img": "images/p1794326154336.jpg",
      "out": false
     },
     {
-     "n": "Minty Fresh",
+     "n": "Fresh Mint Mojito",
      "d": "",
-     "p": 220,
+     "p": 230,
      "e": "🍽️",
      "img": "images/p1794326167068.jpg",
      "out": false
@@ -410,6 +410,46 @@
      "p": 220,
      "e": "🍽️",
      "img": "images/p1794475466491.jpg",
+     "out": false
+    },
+    {
+     "n": "Orange Pulpy Cooler",
+     "d": "",
+     "p": 250,
+     "e": "🍽️",
+     "img": "",
+     "out": false
+    },
+    {
+     "n": "Strawberry Crush",
+     "d": "",
+     "p": 250,
+     "e": "🍽️",
+     "img": "",
+     "out": false
+    },
+    {
+     "n": "Green Apple Mojito",
+     "d": "",
+     "p": 250,
+     "e": "🍽️",
+     "img": "",
+     "out": false
+    },
+    {
+     "n": "Lychee Lych",
+     "d": "",
+     "p": 220,
+     "e": "🍽️",
+     "img": "",
+     "out": false
+    },
+    {
+     "n": "Strawberry Lemonade",
+     "d": "",
+     "p": 220,
+     "e": "🍽️",
+     "img": "",
      "out": false
     }
    ]
