@@ -43,7 +43,7 @@
     {
      "n": "Tandoori Chicken Tikka Piece",
      "d": "Tandoori Chicken Tikka Piece (1/8)",
-     "p": 150,
+     "p": 170,
      "e": "🍽️",
      "img": "images/p1794730167486.jpg",
      "out": false
@@ -169,7 +169,7 @@
      "out": false
     },
     {
-     "n": "Samosa Chaat",
+     "n": "Samosa Chaat (Single)",
      "d": "Crushed samosas topped with yogurt, chutneys and spices.",
      "p": 140,
      "e": "🥟",
@@ -194,7 +194,7 @@
     },
     {
      "n": "Potato Wedges",
-     "d": "",
+     "d": "100 grams",
      "p": 150,
      "e": "🍽️",
      "img": "images/p1794322434893.jpg",
