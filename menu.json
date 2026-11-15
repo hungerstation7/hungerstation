@@ -25,14 +25,6 @@
      "out": false
     },
     {
-     "n": "Tandoori Chicken – Quarter Meal",
-     "d": "Quarter tandoori Tikka, 1 Paratha, vinegar Pickle, Special Dip",
-     "p": 550,
-     "e": "🍗",
-     "img": "images/p1794058088796.jpg",
-     "out": false
-    },
-    {
      "n": "Tandoori Chicken Paratha Roll",
      "d": "Tender, marinated chicken pieces grilled in the tandoor and rolled in Paratha with special chutney, sauce & masala",
      "p": 260,
@@ -41,11 +33,27 @@
      "out": false
     },
     {
-     "n": "Tandoori Chicken Eighth Meal",
-     "d": "A lighter portion of tandoori chicken with rice and sides. 1/8 tandoori Tikka, 1 Paratha, vinegar Pickle, Special Dip  ",
-     "p": 400,
+     "n": "Tandoori Chicken Meal",
+     "d": "One piece of tandoori chicken Tikka, 1 Paratha, vinegar Pickle, Special Dip  ",
+     "p": 250,
      "e": "🍽️",
-     "img": "images/p1794066811597.jpg",
+     "img": "images/p1794730005933.jpg",
+     "out": false
+    },
+    {
+     "n": "Tandoori Chicken Tikka Piece",
+     "d": "Tandoori Chicken Tikka Piece (1/8)",
+     "p": 150,
+     "e": "🍽️",
+     "img": "images/p1794730167486.jpg",
+     "out": false
+    },
+    {
+     "n": "Paratha",
+     "d": "",
+     "p": 50,
+     "e": "🍽️",
+     "img": "images/p1794730268693.jpg",
      "out": false
     }
    ]
