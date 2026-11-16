@@ -89,13 +89,45 @@
    ]
   },
   {
-   "name": "Ice Creams",
-   "notice": "Per scoop",
+   "name": "🍨 Real Fruit Ice Cream",
+   "notice": "Natural: No artificial fruit flavors or colors. ",
    "items": [
     {
-     "n": "Ice Cream",
-     "d": "Different flavours – mention flavour in notes",
-     "p": 0,
+     "n": "Banana Ice Cream 🍌",
+     "d": "🍨 REAL FRUIT CREAM ICE CREAM  Delicious, creamy ice cream made with real fruits and fresh dairy cream. Naturally fruity, smooth and refreshing, with no artificial fruit flavors or colors.  🍌 Banana | 🍏 Green Apple | 🍈 Guava | 🍊 Orange  Real Fruit. Real Taste. Creamy Happiness!  🍦 Choose your favorite flavor and order now!",
+     "p": 150,
+     "e": "🍨",
+     "img": "images/p1794819687171.jpg",
+     "out": false
+    },
+    {
+     "n": "Apple Ice Cream 🍏",
+     "d": "🍨 REAL FRUIT CREAM ICE CREAM  Delicious, creamy ice cream made with real fruits and fresh dairy cream. Naturally fruity, smooth and refreshing, with no artificial fruit flavors or colors.  🍌 Banana | 🍏 Green Apple | 🍈 Guava | 🍊 Orange  Real Fruit. Real Taste. Creamy Happiness!  🍦 Choose your favorite flavor and order now!",
+     "p": 180,
+     "e": "🍨",
+     "img": "images/p1794820092235.jpg",
+     "out": false
+    },
+    {
+     "n": "Guava Ice Cream 🍈",
+     "d": "🍨 REAL FRUIT CREAM ICE CREAM  Delicious, creamy ice cream made with real fruits and fresh dairy cream. Naturally fruity, smooth and refreshing, with no artificial fruit flavors or colors.  🍌 Banana | 🍏 Green Apple | 🍈 Guava | 🍊 Orange  Real Fruit. Real Taste. Creamy Happiness!  🍦 Choose your favorite flavor and order now!",
+     "p": 170,
+     "e": "🍈",
+     "img": "images/p1794820178857.jpg",
+     "out": false
+    },
+    {
+     "n": "Orange Ice Cream 🍊",
+     "d": "🍨 REAL FRUIT CREAM ICE CREAM  Delicious, creamy ice cream made with real fruits and fresh dairy cream. Naturally fruity, smooth and refreshing, with no artificial fruit flavors or colors.  🍌 Banana | 🍏 Green Apple | 🍈 Guava | 🍊 Orange  Real Fruit. Real Taste. Creamy Happiness!  🍦 Choose your favorite flavor and order now!",
+     "p": 160,
+     "e": "🍊",
+     "img": "images/p1794820261171.jpg",
+     "out": true
+    },
+    {
+     "n": "Extra Scoop of Fresh Fruit Ice Cream",
+     "d": "🍨 REAL FRUIT CREAM ICE CREAM  Delicious, creamy ice cream made with real fruits and fresh dairy cream. Naturally fruity, smooth and refreshing, with no artificial fruit flavors or colors.  🍌 Banana | 🍏 Green Apple | 🍈 Guava | 🍊 Orange  Real Fruit. Real Taste. Creamy Happiness!  🍦 Choose your favorite flavor and order now!",
+     "p": 90,
      "e": "🍨",
      "img": "",
      "out": false
@@ -112,7 +144,7 @@
      "p": 0,
      "e": "🥤",
      "img": "",
-     "out": false
+     "out": true
     },
     {
      "n": "Special Dry Nuts & Honey Shake",
