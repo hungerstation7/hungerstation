@@ -308,19 +308,19 @@
    "items": [
     {
      "n": "Cardamom Tea",
-     "d": "",
+     "d": "Made with everyday/Olper powder milk/creamer",
      "p": 100,
      "e": "",
      "img": "images/p1794058369206.jpg",
      "out": false
     },
     {
-     "n": "Signature Coffee",
-     "d": "",
-     "p": 180,
+     "n": "Signature Tea",
+     "d": "Made with Fresh Milk",
+     "p": 120,
      "e": "🍽️",
-     "img": "images/p1794058384931.jpg",
-     "out": true
+     "img": "images/p1794992697468.jpg",
+     "out": false
     },
     {
      "n": "Hot Chocolate",
