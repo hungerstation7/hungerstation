@@ -35,7 +35,7 @@
     {
      "n": "Tandoori Chicken Meal",
      "d": "One piece of tandoori chicken Tikka, 1 Paratha, vinegar Pickle, Special Dip  ",
-     "p": 250,
+     "p": 260,
      "e": "🍽️",
      "img": "images/p1794730005933.jpg",
      "out": false
@@ -62,6 +62,22 @@
      "p": 50,
      "e": "🍽️",
      "img": "images/p1794731458188.jpg",
+     "out": false
+    },
+    {
+     "n": "Long Sandwich",
+     "d": "Chicken Shami Kebab, Egg, Salad, special green sauces",
+     "p": 260,
+     "e": "🍽️",
+     "img": "images/p1794991026176.jpg",
+     "out": false
+    },
+    {
+     "n": "Chicken Fajita Sandwich",
+     "d": "Chicken Fajita with Special Salad and Sauces",
+     "p": 280,
+     "e": "🍽️",
+     "img": "images/p1794991138022.jpg",
      "out": false
     }
    ]
