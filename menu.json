@@ -111,7 +111,7 @@
     {
      "n": "Ice Cream Chocolate (Single) ",
      "d": "🍨 REAL DAIRY CREAM ICE CREAM  Delicious, creamy ice cream Scoop ",
-     "p": 120,
+     "p": 130,
      "e": "🍨",
      "img": "images/p1795409831297.jpg",
      "out": false
@@ -119,7 +119,7 @@
     {
      "n": "Ice Cream Chocolate (Double) ",
      "d": "🍨 REAL DAIRY CREAM ICE CREAM  Delicious, creamy ice cream topping sauce and cocktail fruit, smooth and refreshing, Real Taste. Creamy Happiness!  🍦 Choose your favorite flavor and order now!",
-     "p": 130,
+     "p": 250,
      "e": "🍨",
      "img": "images/p1795409815467.jpg",
      "out": false
@@ -127,7 +127,7 @@
     {
      "n": "Ice Cream Chocolate (Triple)",
      "d": "🍨 REAL DAIRY CREAM ICE CREAM  Delicious, creamy ice cream topping sauce and cocktail fruit, smooth and refreshing, Real Taste. Creamy Happiness!  🍦 Choose your favorite flavor and order now!",
-     "p": 0,
+     "p": 370,
      "e": "🍨",
      "img": "images/p1795409846984.jpg",
      "out": false
@@ -137,23 +137,23 @@
      "d": "🍨 REAL DAIRY CREAM ICE CREAM  Delicious, creamy ice cream Scoop ",
      "p": 120,
      "e": "🍨",
-     "img": "",
+     "img": "images/p1795410541639.jpg",
      "out": false
     },
     {
      "n": "Ice Cream Vanilla (Double) ",
      "d": "🍨 REAL DAIRY CREAM ICE CREAM  Delicious, creamy ice cream topping sauce and cocktail fruit, smooth and refreshing, Real Taste. Creamy Happiness!  🍦 Choose your favorite flavor and order now!",
-     "p": 230,
-     "e": "🍽️",
-     "img": "",
+     "p": 220,
+     "e": "🍨",
+     "img": "images/p1795410560033.jpg",
      "out": false
     },
     {
      "n": "Ice Cream Vanilla (Triple) ",
      "d": "🍨 REAL DAIRY CREAM ICE CREAM  Delicious, creamy ice cream topping sauce and cocktail fruit, smooth and refreshing, Real Taste. Creamy Happiness!  🍦 Choose your favorite flavor and order now!",
-     "p": 350,
-     "e": "🍽️",
-     "img": "",
+     "p": 330,
+     "e": "🍨",
+     "img": "images/p1795410569270.jpg",
      "out": false
     }
    ]
