@@ -109,19 +109,51 @@
    "notice": "Note the Discounted Prices: One Scoop: Rs 130, Two Scoops: Rs 240 & Three Scoops: Rs 350",
    "items": [
     {
-     "n": "Chocolate Chip Ice Cream per scoop",
-     "d": "🍨 REAL DAIRY CREAM ICE CREAM  Delicious, creamy ice cream topping sauce and cocktail fruit, smooth and refreshing, Real Taste. Creamy Happiness!  🍦 Choose your favorite flavor and order now!",
-     "p": 130,
+     "n": "Ice Cream Chocolate (Single) ",
+     "d": "🍨 REAL DAIRY CREAM ICE CREAM  Delicious, creamy ice cream Scoop ",
+     "p": 120,
      "e": "🍨",
-     "img": "images/p1794978996232.jpg",
+     "img": "images/p1795409831297.jpg",
      "out": false
     },
     {
-     "n": "Strawberry Ice Cream per scoop",
+     "n": "Ice Cream Chocolate (Double) ",
      "d": "🍨 REAL DAIRY CREAM ICE CREAM  Delicious, creamy ice cream topping sauce and cocktail fruit, smooth and refreshing, Real Taste. Creamy Happiness!  🍦 Choose your favorite flavor and order now!",
      "p": 130,
      "e": "🍨",
-     "img": "images/p1794978973648.jpg",
+     "img": "images/p1795409815467.jpg",
+     "out": false
+    },
+    {
+     "n": "Ice Cream Chocolate (Triple)",
+     "d": "🍨 REAL DAIRY CREAM ICE CREAM  Delicious, creamy ice cream topping sauce and cocktail fruit, smooth and refreshing, Real Taste. Creamy Happiness!  🍦 Choose your favorite flavor and order now!",
+     "p": 0,
+     "e": "🍨",
+     "img": "images/p1795409846984.jpg",
+     "out": false
+    },
+    {
+     "n": "Ice Cream Vanilla (Single) ",
+     "d": "🍨 REAL DAIRY CREAM ICE CREAM  Delicious, creamy ice cream Scoop ",
+     "p": 120,
+     "e": "🍨",
+     "img": "",
+     "out": false
+    },
+    {
+     "n": "Ice Cream Vanilla (Double) ",
+     "d": "🍨 REAL DAIRY CREAM ICE CREAM  Delicious, creamy ice cream topping sauce and cocktail fruit, smooth and refreshing, Real Taste. Creamy Happiness!  🍦 Choose your favorite flavor and order now!",
+     "p": 230,
+     "e": "🍽️",
+     "img": "",
+     "out": false
+    },
+    {
+     "n": "Ice Cream Vanilla (Triple) ",
+     "d": "🍨 REAL DAIRY CREAM ICE CREAM  Delicious, creamy ice cream topping sauce and cocktail fruit, smooth and refreshing, Real Taste. Creamy Happiness!  🍦 Choose your favorite flavor and order now!",
+     "p": 350,
+     "e": "🍽️",
+     "img": "",
      "out": false
     }
    ]
@@ -315,9 +347,9 @@
      "out": false
     },
     {
-     "n": "Signature Tea",
+     "n": "Cappuccino",
      "d": "Made with Fresh Milk",
-     "p": 120,
+     "p": 250,
      "e": "🍽️",
      "img": "images/p1794992697468.jpg",
      "out": false
@@ -407,7 +439,7 @@
     {
      "n": "Blue Lagoon",
      "d": "",
-     "p": 250,
+     "p": 260,
      "e": "🍽️",
      "img": "images/p1794326129809.jpg",
      "out": false
@@ -431,7 +463,7 @@
     {
      "n": "Peach Paradise",
      "d": "",
-     "p": 220,
+     "p": 250,
      "e": "🍽️",
      "img": "images/p1794326183855.jpg",
      "out": false
@@ -471,7 +503,7 @@
     {
      "n": "Lychee Lych",
      "d": "",
-     "p": 220,
+     "p": 230,
      "e": "🍽️",
      "img": "images/p1794729520752.jpg",
      "out": false
@@ -479,7 +511,7 @@
     {
      "n": "Grape Blue Mood",
      "d": "Sensational drink made with fresh grapes to boost your mood",
-     "p": 250,
+     "p": 270,
      "e": "🍽️",
      "img": "images/p1794807825002.jpg",
      "out": false
