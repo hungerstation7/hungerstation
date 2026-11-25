@@ -14,15 +14,15 @@
      "p": 280,
      "e": "🍜",
      "img": "images/p1794057419888.jpg",
-     "out": true
+     "out": false
     },
     {
      "n": "Sweet & Sour chicken with fried rice.",
-     "d": "Sweet & Sour chicken with fried rice.",
+     "d": "Pilau Kebab (single)",
      "p": 350,
      "e": "🍢",
      "img": "images/p1794731007721.jpg",
-     "out": true
+     "out": false
     },
     {
      "n": "Tandoori Chicken Paratha Roll",
@@ -57,7 +57,7 @@
      "out": false
     },
     {
-     "n": "Dip/Sauce",
+     "n": "Dip",
      "d": "30 ml",
      "p": 50,
      "e": "🍽️",
@@ -78,6 +78,46 @@
      "p": 280,
      "e": "🍽️",
      "img": "images/p1794991138022.jpg",
+     "out": true
+    },
+    {
+     "n": "Pilau Kebab (single)",
+     "d": "Good quantity of Pilau, 1 Shami Kebab, Chatni",
+     "p": 210,
+     "e": "🍽️",
+     "img": "images/p1795586925113.jpg",
+     "out": false
+    },
+    {
+     "n": "Pilau Kebab (double)",
+     "d": "Good quantity of Pilau, 2 Shami Kebab, Chatni",
+     "p": 250,
+     "e": "🍽️",
+     "img": "images/p1795586938096.jpg",
+     "out": false
+    },
+    {
+     "n": "Pilau Tikka (single)",
+     "d": "Good quantity of Pilau, 1 Tandoori chk piece, Chatni",
+     "p": 250,
+     "e": "🍽️",
+     "img": "images/p1795586948574.jpg",
+     "out": false
+    },
+    {
+     "n": "Pilau Tikka (double)",
+     "d": "Good quantity of Pilau, 2 Tandoori chk pieces, Chatni",
+     "p": 410,
+     "e": "🍽️",
+     "img": "images/p1795586957196.jpg",
+     "out": false
+    },
+    {
+     "n": "Pilau Tikka & Kebab",
+     "d": "Good quantity of Pilau, 1 Tandoori chk piece, 1 Shami Kebab, Chatni",
+     "p": 390,
+     "e": "🍽️",
+     "img": "images/p1795586968538.jpg",
      "out": false
     }
    ]
