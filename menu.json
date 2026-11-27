@@ -59,23 +59,15 @@
     {
      "n": "Anda Shami",
      "d": "Chicken Shami Kebab, Egg, Salad, special green sauces",
-     "p": 200,
+     "p": 220,
      "e": "🍽️",
      "img": "images/p1794991026176.jpg",
      "out": false
     },
     {
-     "n": "Chicken Fajita Sandwich",
-     "d": "Chicken Fajita with Special Salad and Sauces",
-     "p": 280,
-     "e": "🍽️",
-     "img": "images/p1794991138022.jpg",
-     "out": true
-    },
-    {
      "n": "Pilau Kebab (single)",
      "d": "Good quantity of Pilau, 1 Shami Kebab, Chatni",
-     "p": 210,
+     "p": 220,
      "e": "🍽️",
      "img": "images/p1795586925113.jpg",
      "out": false
@@ -83,7 +75,7 @@
     {
      "n": "Pilau Kebab (double)",
      "d": "Good quantity of Pilau, 2 Shami Kebab, Chatni",
-     "p": 250,
+     "p": 260,
      "e": "🍽️",
      "img": "images/p1795586938096.jpg",
      "out": false
@@ -110,6 +102,14 @@
      "p": 390,
      "e": "🍽️",
      "img": "images/p1795586968538.jpg",
+     "out": false
+    },
+    {
+     "n": "Shami Kebab",
+     "d": "",
+     "p": 50,
+     "e": "🍽️",
+     "img": "images/p1795783993088.jpg",
      "out": false
     }
    ]
